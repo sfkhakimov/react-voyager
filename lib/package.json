@@ -1,6 +1,6 @@
 {
     "name": "react-voyager",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "react-voyager - a library for creating interactive guides",
     "main": "./dist/index.js",
     "types": "./dist/types/index.d.ts",
@@ -32,7 +32,7 @@
     "homepage": "https://github.com/sfkhakimov/react-voyager#readme",
     "files": [
         "dist",
-        "../README.md"
+        "README.md"
     ],
     "dependencies": {
         "lodash": "^4.17.20",
