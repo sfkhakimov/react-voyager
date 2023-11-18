@@ -1,5 +1,5 @@
 # react-voyager 
-A library that allows you to create stunning interactive guides.
+A library that allows you to create stunning interactive guides. [Demo](https://react-voyager.site/)
 
 ## [Introduction](#introduction)
 
