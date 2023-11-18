@@ -1,0 +1,74 @@
+## [Quick Start](#quick-start)
+
+To get started, you need to install the package:
+
+```commandline
+npm install react-voyager
+```
+
+Then, to use the guide, you need to wrap your application with the `VoyagerProvider` and pass it the steps of your guide as well
+as the `PopperContent` that will display your tooltip content:
+
+```tsx
+import React from 'react';
+import { VoyagerProvider, PopperContentProps } from 'react-voyager';
+
+const steps = [
+    {
+        selector: '[data-voyager=One]',
+        content: 'Content of the first step', // Here you can place your content. It can be any JSX.Element
+    },
+    {
+        selector: '[data-voyager=Two]',
+        content: 'Content of the second step',
+    },
+    {
+        selector: '[data-voyager=Three]',
+        content: 'Content of the third step',
+    },
+];
+
+const PopperContent = ({
+    content,
+    goNextStep,
+    goBackStep,
+    skip,
+}: PopperContentProps) => {
+    return (
+        <div>
+            {content}
+            <button onClick={skip}>skip</button>
+            <button onClick={goBackStep}>back</button>
+            <button onClick={goNextStep}>next</button>
+        </div>
+    );
+};
+
+const App = ({ children }) => {
+    return (
+        <VoyagerProvider
+            PopperContent={PopperContent}
+            steps={steps}
+        >
+            {children}
+        </VoyagerProvider>
+    );
+};
+```
+
+
+To initiate the guide, you need to call the `start` function from `useVoyagerHelpers`:
+
+```tsx
+import { useVoyagerHelpers } from 'react-voyager';
+
+const MyComponent = () => {
+    const { start } = useVoyagerHelpers();
+    return (
+        <div>
+            ...some content here
+            <button onClick={start}>Start voyage</button>
+        </div>
+    );
+};
+```

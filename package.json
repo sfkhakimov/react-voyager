@@ -1,0 +1,27 @@
+{
+    "name": "react-voyager-mono",
+    "version": "0.1.0",
+    "workspaces": [
+        "./lib",
+        "./site"
+    ],
+    "scripts": {
+        "lib:build": "npm run build -w lib",
+        "lib:tsc": "npm run tsc -w lib",
+        "lib:lint": "npm run lint -w lib",
+        "lib:lint:fix": "npm run lint:fix -w lib",
+        "site:start": "npm run start -w site",
+        "site:build": "npm run build -w site",
+        "site:tsc": "npm run typecheck -w site"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sfkhakimov/react-voyager.git"
+    },
+    "author": "sfkhakimov",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sfkhakimov/react-voyager/issues"
+    },
+    "homepage": "https://github.com/sfkhakimov/react-voyager#readme"
+}

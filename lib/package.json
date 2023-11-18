@@ -1,0 +1,58 @@
+{
+    "name": "react-voyager",
+    "version": "0.1.0",
+    "description": "react-voyager - a library for creating interactive guides",
+    "main": "./dist/index.js",
+    "types": "./dist/types/index.d.ts",
+    "scripts": {
+        "prepare": "cd .. && husky install lib/.husky",
+        "preBuild": "rm -rf ",
+        "build": "npm run preBuild && rollup --config rollup.config.js",
+        "tsc": "tsc",
+        "lint": "eslint --ext .js,.jsx,.ts,.tsx src ",
+        "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx src --fix"
+    },
+    "keywords": [
+        "reactour",
+        "react-joyride",
+        "reactour",
+        "intro.js",
+        "driver.js",
+        "react-shepherd"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sfkhakimov/react-voyager.git"
+    },
+    "author": "sfkhakimov",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sfkhakimov/react-voyager/issues"
+    },
+    "homepage": "https://github.com/sfkhakimov/react-voyager#readme",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "lodash": "^4.17.20",
+        "react": "^17.0.0-0 || ^18.0.0-0",
+        "react-dom": "^17.0.0-0 || ^18.0.0-0"
+    },
+    "devDependencies": {
+        "@rollup/plugin-typescript": "^11.1.5",
+        "@types/lodash": "^4.14.165",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "@typescript-eslint/eslint-plugin": "^6.10.0",
+        "@typescript-eslint/parser": "^6.10.0",
+        "eslint": "^8.53.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-config-recommended": "^4.1.0",
+        "eslint-plugin-import": "^2.29.0",
+        "husky": "^8.0.0",
+        "prettier": "^2.8.4",
+        "rollup": "^2.79.1",
+        "rollup-plugin-styles": "^4.0.0",
+        "typescript": "^4.9.5"
+    }
+}
