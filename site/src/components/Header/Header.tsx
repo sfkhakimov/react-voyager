@@ -11,13 +11,16 @@ const Header = () => {
                 </h1>
                 <div className="flex items-center justify-center">
                     <a
-                        href="https://yandex.ru"
+                        href="https://github.com/sfkhakimov/react-voyager"
                         target="_blank"
                         className="mr-6"
                     >
                         <AiFillGithub fontSize={36} color="white" />
                     </a>
-                    <a href="https://yandex.ru" target="_blank">
+                    <a
+                        href="https://www.npmjs.com/package/react-voyager"
+                        target="_blank"
+                    >
                         <DiNpm fontSize={36} color="white" />
                     </a>
                 </div>
